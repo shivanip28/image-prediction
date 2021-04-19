@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+<style>
+    body{
+        width: 70%;
+        background-color:PeachPuff;
+        text-align: center;
+        border : 5px solid Orchid;
+        height: 400px;
+        border-radius: 10px;
+        margin-top: 100px;
+        margin-left: 14%;
+
+    }
+    p{  
+        
+        font-size: 28px;
+    }
+    input{
+        font-size: 25px;
+       
+    }
+    p.heading{
+        background-color: orchid;
+        border-radius: 15px;
+        padding: 5px;
+        margin-top: 50px;
+        font-size: 35px;
+        border: 2px solid black;
+        width: 550px;
+        text-align: center;
+        margin-left: 250px;
+        color:black;
+        font-weight: bold;
+    }
+    input.btn{
+        border-radius: 5px;
+        padding:5px;
+        width: 125px;
+
+    }
+    
+</style>
+<body>
+    <p class="heading"> This is image upload page </p>
+    <p> Please choose the image for prediction </p>
+    <br>
+
+    <form action = "imgprocess" method = "POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input style="margin-left:80px;" id = "image" type = "file" name = "image"/><br><br>
+        <br><br>
+        <input class="btn" type = "submit" value = "Submit">
+        
+    </form>
+</body>
+</html>

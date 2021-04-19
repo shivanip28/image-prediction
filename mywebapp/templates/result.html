@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result page</title>
+</head>
+<style>
+
+    body{
+        background-color: burlywood;
+        border: 3px solid black;
+        border-radius: 10px;
+        width: 60%;
+        height: 550px;
+        margin-left: 20%;
+        margin-top: 100px;
+    }
+    p{
+        font-size: 45px;
+        background-color: blueviolet;
+        text-align: center;
+        width: 300px;
+        margin-left: 35%;
+        border-radius: 15px;
+
+    }
+
+    div.pred{
+        font-size: 30px;
+        border: 2px solid black;
+        border-radius: 13px;
+        text-align: center;
+        margin-left: 25%;
+        background-color: blueviolet;
+        padding: 5px;
+        width: 450px;
+    }
+
+</style>
+<body>
+    <p> Predictions  </p>
+
+</div>
+<div class="pred">
+{% for r,p in res %}
+<ul>
+   <li> 
+       <strong>{{r}} -- </strong> <em>{{p}} </em>% 
+    </li> <br/>
+</ul>
+{% endfor %}
+</div>
+
+
+</body>
+</html>
